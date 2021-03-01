@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<title>Boggle Game</title>
+<link rel="stylesheet" href="boggle.css">
+</head>
+<body>
+
+<header>
+  <h1>Boggle Game</h1>
+  <div id="game-timer"></div>
+  <nav>
+    <button id="rotate-button" class="hide">ROTATE</button>
+    <button id="start-button">START</button>
+  </nav>
+</header>
+
+<main>
+
+  <section id="game-info">
+    <p>
+      A fun and easy game to play with a group of people (in person or virtual screenshare).  The goal of the game is to find as many 3 or more letter words as possible by linking the different letters together.  Linking is limited to up/down, left/right, or diagonally.
+    </p>
+    <h2>Each player will need:</h2>
+    <ul>
+      <li>Pieces of paper</li>
+      <li>Pen or Pencil</li>
+    </ul>
+    <h2>How to play:</h2>
+    <ul>
+      <li>Click the 'start' button and a new combination of letters will appear.</li>
+      <li>Each player writes down as many words as they see before the timer goes off.</li>
+      <li>If so desired, click the 'rotate' button to get a new look at the letter combinations.</li>
+      <li>When the timer goes off, all players stop writing down the words they see.</li>
+    </ul>
+    <h2>Scoring:</h2>
+    <ul>
+      <li>Every player reads out the list of words they found.  If anyone else found the same word, all players with that word should remove it from their list of found words.</li>
+      <li>Each unique word found be each player is worth points.  3 letters is 1 point, 4 letters is 2 points, and so on.</li>
+      <li>Write down each player's total points for the game round and continue rounds until tired or a certain point goal is reached.</li>
+    </ul>
+  </section>
+
+  <section id="game-board"></section>
+
+</main>
+
+<footer>
+  Thank you for playing Boggle.
+</footer>
+
+</body>
+
+<script src="boggle.js" defer></script>
+
+</html>
