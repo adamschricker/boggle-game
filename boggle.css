@@ -78,7 +78,7 @@ header > nav {
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-evenly;
 }
 
 header > nav > button {
