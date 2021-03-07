@@ -52,6 +52,7 @@ header {
   border-bottom: thin solid var(--color-border);
   display: flex;
   flex: 0;
+  flex-wrap: wrap;
   padding: 1rem;
 }
 
