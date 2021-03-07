@@ -17,5 +17,5 @@ A fun and easy game to play with a group of people (in person or virtual screens
 - Write down each player's total points for the game round and continue rounds until tired or a certain point goal is reached.
 
 
-[HTML Preview](https://htmlpreview.github.io/?https://github.com/adamschricker/boggle-game/blob/trunk/boggle.html)
+[HTML Preview](https://htmlpreview.github.io/?https://github.com/adamschricker/boggle-game/blob/main/boogle.html)
 (Please note: Wait for external CSS and Javascript files to load)
