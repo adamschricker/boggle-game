@@ -136,7 +136,8 @@
   const startGame = () => {
     setClass(gameInfo, "hide");
     setClass(rotateButton);
-    rotate = 0;
+    rotate = -1;
+    rotateBoard();
     displayGameBoard();
   }
 
