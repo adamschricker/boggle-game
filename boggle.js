@@ -27,6 +27,7 @@
 
   let rotate = 0;
   let timer = 0;
+  let timerTimeout;
 
   const gameBoard = document.querySelector("#game-board");
   const gameInfo = document.querySelector("#game-info");
@@ -106,12 +107,14 @@
   /*********************/
 
   const startTimer = () => {
+    clearTimeout(timerTimeout);
     timer = 181;
     updateTimer();
     setClass(gameTimer);
   }
 
   const updateTimer = () => {
+    clearTimeout(timerTimeout);
     timer--;
     if (timer > 0) {
       const minutes = Math.floor(timer / 60);
@@ -120,7 +123,7 @@
         seconds = "0" + seconds;
       }
       gameTimer.innerHTML = "TIME LEFT: " + minutes + ":" + seconds;
-      setTimeout(updateTimer, 1000);
+      timerTimeout = setTimeout(updateTimer, 1000);
     } else {
       gameTimer.innerHTML = "TIME'S UP";
       setClass(gameTimer, "timeOut");
