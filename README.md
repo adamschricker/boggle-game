@@ -8,7 +8,7 @@ A fun and easy game to play with a group of people (in person or virtual screens
 *How to play:*
 - Click the 'start' button and a new combination of letters will appear.
 - Each player writes down as many words as they see before the timer goes off.
-- If so desired, click the 'rotate' button to get a new look at the letter combinations.
+- If so desired, click the 'rotate' button to get a different look at the letter combinations.
 - When the timer goes off, all players stop writing down the words they see.
 
 *Scoring:*

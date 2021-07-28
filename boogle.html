@@ -10,16 +10,16 @@
 
 <header>
   <h1>Boggle Game</h1>
-  <div id="game-timer"></div>
+  <div id="timer"></div>
   <nav>
-    <button id="rotate-button" class="hide">ROTATE</button>
-    <button id="start-button">START</button>
+    <button id="rotate" class="hide">ROTATE</button>
+    <button id="toggle"></button>
   </nav>
 </header>
 
 <main>
 
-  <section id="game-info">
+  <section id="info">
     <p>
       A fun and easy game to play with a group of people (in person or virtual screenshare).  The goal of the game is to find as many 3 or more letter words as possible by linking the different letters together.  Linking is limited to up/down, left/right, or diagonally.
     </p>
@@ -32,7 +32,7 @@
     <ul>
       <li>Click the 'start' button and a new combination of letters will appear.</li>
       <li>Each player writes down as many words as they see before the timer goes off.</li>
-      <li>If so desired, click the 'rotate' button to get a new look at the letter combinations.</li>
+      <li>If so desired, click the 'rotate' button to get a different look at the letter combinations.</li>
       <li>When the timer goes off, all players stop writing down the words they see.</li>
     </ul>
     <h2>Scoring:</h2>
@@ -43,7 +43,9 @@
     </ul>
   </section>
 
-  <section id="game-board"></section>
+  <section id="board"></section>
+
+  <section id="countdown"></section>
 
 </main>
 
