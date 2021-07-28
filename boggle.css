@@ -63,6 +63,14 @@ footer {
   padding: 1rem;
 }
 
+a:active,
+a:hover,
+a:link,
+a:visited {
+  color: var(--color-accent);
+}
+
+
 
 /************/
 /** HEADER **/
@@ -72,7 +80,7 @@ header {
   border-bottom: thin solid var(--color-border);
   display: flex;
   flex: 0;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   padding: 1rem;
 }
 
