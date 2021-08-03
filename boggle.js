@@ -32,14 +32,14 @@
     /****************************/
     /** Dice - Random Die Side **/
     /****************************/
-    randomDieSide: function(die) {
+    randomDieSide(die) {
       return die[Math.floor(Math.random() * die.length)];
     },
 
     /********************/
     /** Dice - Shuffle **/
     /********************/
-    shuffle: function() {
+    shuffle() {
       for (let i = this.dice.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [this.dice[i], this.dice[j]] = [this.dice[j], this.dice[i]];
@@ -63,7 +63,7 @@
       /** Display - Elements - Board **/
       /********************************/
       board: {
-        build: function() {
+        build() {
           this.built = true;
           game.display.functions.clearElement(this.element);
           game.dice.shuffle();
@@ -76,7 +76,7 @@
         },
         built: false,
         element: document.querySelector("#board"),
-        size: function() {
+        size() {
           const setStyle = (style, setting) => {
             game.display.functions.setStyle(
               this.element,
@@ -94,7 +94,7 @@
           setStyle("height", `${max}px`);
           setStyle("width", `${max}px`);
         },
-        update: function() {
+        update() {
           if (game.state.values.hasFinished) {
             this.built = false;
             game.display.functions.setClass(this.element, "stopped");
@@ -120,7 +120,7 @@
           "SET",
           "GO"
         ],
-        update: function() {
+        update() {
           if (game.state.countdown.isActive) {
             game.display.functions.setClass(this.element, "display");
             game.display.functions.setInnerHTML(
@@ -138,7 +138,7 @@
       /*******************************/
       info: {
         element: document.querySelector("#info"),
-        update: function() {
+        update() {
           if (game.state.values.hasStarted) {
             game.display.functions.setClass(this.element, "hide");
           }
@@ -149,14 +149,14 @@
       /** Display - Elements - Rotate **/
       /*********************************/
       rotate: {
-        addClick: function() {
+        addClick() {
             this.element.addEventListener("click", () => { game.state.rotate(); });
         },
         element: document.querySelector("#rotate"),
-        prepare: function() {
+        prepare() {
             this.addClick();
         },
-        update: function() {
+        update() {
           game.display.functions.setClass(
             this.element,
             (!game.state.values.hasStarted || game.state.countdown.isActive)
@@ -170,7 +170,7 @@
       /********************************/
       timer: {
         element: document.querySelector("#timer"),
-        update: function() {
+        update() {
           if (game.state.values.hasFinished) {
             game.display.functions.setInnerHTML(this.element, "GAME OVER");
             game.display.functions.setClass(this.element, "timeOut");
@@ -196,15 +196,15 @@
       /** Display - Elements - Toggle **/
       /*********************************/
       toggle: {
-        addClick: function() {
+        addClick() {
           this.element.addEventListener("click", () => game.state.toggle());
         },
         element: document.querySelector("#toggle"),
-        prepare: function() {
+        prepare() {
           this.update();
           this.addClick();
         },
-        update: function() {
+        update() {
           if (game.state.countdown.isActive) {
             game.display.functions.setClass(this.element, "hide");
           } else {
@@ -228,7 +228,7 @@
       /*****************************************/
       /** Display - Functions - Clear Element **/
       /*****************************************/
-      clearElement: (element) => {
+      clearElement(element) {
         while (element.firstChild) {
             element.removeChild(element.firstChild);
         }
@@ -237,7 +237,7 @@
       /***********************************/
       /** Display - Functions - Prepare **/
       /***********************************/
-      prepare: function() {
+      prepare() {
         game.display.elements.toggle.prepare();
         game.display.elements.rotate.prepare();
       },
@@ -245,7 +245,7 @@
       /*************************************/
       /** Display - Functions - Set Class **/
       /*************************************/
-      setClass: (element, CSSclass) => {
+      setClass(element, CSSclass) {
         if (element.classList.value !== CSSclass) {
           element.classList.remove(...element.classList);
           if (typeof CSSclass !== "undefined") {
@@ -257,7 +257,7 @@
       /*****************************************/
       /** Display - Functions - Set InnerHTML **/
       /*****************************************/
-      setInnerHTML: (element, innerHTML = "") => {
+      setInnerHTML(element, innerHTML = "") {
         if (element.innerHTML !== innerHTML) {
           element.innerHTML = innerHTML;
         }
@@ -266,7 +266,7 @@
       /*************************************/
       /** Display - Functions - Set Style **/
       /*************************************/
-      setStyle: (element, style, setting) => {
+      setStyle(element, style, setting) {
         if (element.style[style] !== setting) {
           element.style[style] = setting;
         }
@@ -275,7 +275,7 @@
       /*********************************/
       /** Display - Functions - Start **/
       /*********************************/
-      start: function() {
+      start() {
         this.prepare();
         setInterval(() => this.state.watcher(), 100);
       },
@@ -285,7 +285,7 @@
       /*********************************/
       state: {
         copy: null,
-        watcher: function() {
+        watcher() {
           const stateCopy = JSON.stringify(game.state);
           if (this.copy != stateCopy) {
             this.copy = stateCopy;
@@ -297,7 +297,7 @@
       /**********************************/
       /** Display - Functions - Update **/
       /**********************************/
-      update: function() {
+      update() {
         Object.values(game.display.elements)
           .forEach(_ => _.update());
       }
@@ -317,12 +317,12 @@
       count: null,
       countStart: -1,
       isActive: false,
-      start: function() {
+      start() {
         this.count = this.countStart;
         this.isActive = true;
         this.update();
       },
-      update: function() {
+      update() {
         this.count++;
         if (this.count < game.display.elements.countdown.text.length) {
           setTimeout(() => this.update(), 1000);
@@ -336,7 +336,7 @@
     /********************/
     /** State - Rotate **/
     /********************/
-    rotate: function() {
+    rotate() {
       this.values.rotation++;
       if (this.values.rotation > 3) { this.values.rotation = 0; }
     },
@@ -344,7 +344,7 @@
     /*******************/
     /** State - Start **/
     /*******************/
-    start: () => {
+    start() {
       game.display.functions.start();
     },
 
@@ -352,18 +352,18 @@
     /** State - Timer **/
     /*******************/
     timer: {
-      clear: function() {
+      clear() {
         clearInterval(game.state.timer.timeout);
         this.value = null;
       },
-      start: function() {
+      start() {
         this.clear();
         this.value = this.startValue;
         this.timeout = setInterval(() => this.update(), 1000);
       },
       startValue: 180, // 3 minutes in seconds
       timeout: null,
-      update: function() {
+      update() {
         this.value--;
         if (this.value <= 0) {
           this.value = null;
@@ -376,7 +376,7 @@
     /********************/
     /** State - Toggle **/
     /********************/
-    toggle: function() {
+    toggle() {
       this.values.hasStarted = !this.values.hasStarted;
 
       if (this.values.hasStarted) {
