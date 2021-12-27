@@ -18,5 +18,4 @@ Fun game for a group - in-person or online
 - Unique words are scored - 3 letters = 1 point, 4 letters = 2 points, and so on.
 - Tally each player's points and repeat till tired or a certain point goal is reached.
 
-[HTML Preview](https://htmlpreview.github.io/?https://github.com/adamschricker/boggle-game/blob/main/index.html)
-(Please note: Wait for external CSS and Javascript files to load)
+[Boggle on AdamSchricker.com](https://adamschricker.com/fun/games/boggle/)
