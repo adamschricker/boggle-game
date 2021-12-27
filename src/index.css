@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/***************/
+/** VARIABLES **/
+/***************/
+:root {
+  --color-accent: orange;
+  --color-alert: red;
+  --color-border: #aaa;
+
+  --color-webpage-text: #f6f6f6;
+  --color-webpage-background: #333;
+
+  --color-dice-text: #333;
+  --color-dice-background: #f6f6f6;
+
+  --font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/***********/
+/** RESET **/
+/***********/
+* {
+  border: none;
+  box-sizing: border-box;
+  color: var(--color-webpage-text);
+  font-family: var(--font-family);
+  font-size: 100%;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  word-wrap: break-word;
+}
+
+
+/************/
+/** LAYOUT **/
+/************/
+html, body {
+  background-color: var(--color-webpage-background);
+  color: var(--color-webpage-text);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  flex: 1 1 auto;
+}
+
+
+/*************/
+/** BUTTONS **/
+/*************/
+button {
+  background-color: var(--color-website-background);
+  border: thin solid var(--color-border);
+  border-radius: 0.5rem;
+  color: var(--color-text);
+  cursor: pointer;
+  display: block;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.5s ease;
+}
+
+button:disabled {
+  display: none;
+}
+
+button:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 1rem 0 var(--color-accent) inset;
+  color: var(--color-accent);
+}
+
+button.primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+button.primary:hover {
+  border-color: white;
+  box-shadow: 0 0 1rem 0 white inset;
+  color: white;
+  text-shadow: 0 0 0.25rem white;
+}
+
+.button-group {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
