@@ -48,15 +48,15 @@ export const Instructions = (): JSX.Element => (
     </ul>
     <h2>Each player will need:</h2>
     <ul>
-      <li>Pieces of paper.</li>
-      <li>Pen or pencil.</li>
+      <li>Pieces of paper</li>
+      <li>Pen or pencil</li>
     </ul>
     <h2>Scoring:</h2>
     <ul>
       <li>Each player reads out their list of words.</li>
       <li>Any matching words are crossed out for all players.</li>
       <li>Unique words are scored - 3 letters = 1 point, 4 letters = 2 points, and so on.</li>
-      <li>Tally each player's points and repeat till tired or a certain point goal is reached.</li>
+      <li>Tally each player's points and repeat until tired or a point goal is reached.</li>
     </ul>
   </div>
 );

@@ -9,13 +9,13 @@ Fun game for a group - in-person or online
 - After 3 minutes the timer goes off - all players stop writing.
 
 *Each player will need:*
-- Pieces of paper.
-- Pen or pencil.</li>
+- Pieces of paper
+- Pen or pencil
 
 *Scoring:*
 - Each player reads out their list of words.
 - Any matching words are crossed out for all players.
 - Unique words are scored - 3 letters = 1 point, 4 letters = 2 points, and so on.
-- Tally each player's points and repeat till tired or a certain point goal is reached.
+- Tally each player's points and repeat until tired or a point goal is reached.
 
 [Boggle on AdamSchricker.com](https://adamschricker.com/fun/games/boggle/)
