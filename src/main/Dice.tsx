@@ -34,7 +34,7 @@ export const Dice = ({
         display: flex;
         flex-wrap: wrap;
         height: 100%;
-        margin: auto;
+        margin: 0 auto;
         overflow: hidden;
         padding: 2rem;
         transition: all 0.3s ease-in-out;
