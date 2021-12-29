@@ -16,7 +16,9 @@ export const Buttons = observer(({
   rotateButtonClick,
 }: ButtonsProps): JSX.Element => {
 
-  const hidePlayButton: boolean = currentGameState === GameState.Playing;
+  const hidePlayButton: boolean = currentGameState === GameState.Playing
+    || currentGameState === GameState.Starting;
+
   const hideRotateButton: boolean = currentGameState !== GameState.Playing;
 
   return (
